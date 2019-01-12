@@ -8,8 +8,8 @@ namespace Pizzeria
 {
     class Ingredientes
     {
-        private String nombre { get; set; }
-        private int precio { get; set; }
+        public String nombre { get; set; }
+        public int precio { get; set; }
 
         public Ingredientes(String nombre, int precio)
         {
