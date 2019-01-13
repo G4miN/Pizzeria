@@ -81,8 +81,48 @@ namespace Pizzeria
             todo += "Tipo de carne: " + salsa.getNombre() + "\n";
             todo += getAgregados() + " Adicionales: \n";
 
+            //Listar ingredientes adicionales
+            for (int i = 0; i < adicionales.Length; i++)
+            {
+                if (adicionales[i] != null)
+                {
+                    todo += adicionales[i].getNombre() + " $" + adicionales[i].getPrecio() + "\n";
+                }
+            }
+
+            todo += "\nTotal: $" + getTotal();
+
+            todo += "\n====================================================================\n";
+
             return todo;
 
+        }
+
+        //Metodo Para agregar ingredientes adicionales
+        public void agregarAdicionales(Ingredientes adicional)
+        {
+            bool agregado = false;
+
+            for (int i = 0; i < adicionales.Length; i++)
+            {
+                if (adicionales[i] == null)
+                {
+                    adicionales[i] = adicional;
+                    agregado = true;
+                    preciototal += adicional.getPrecio();
+                    ingredientesAgregados++;
+                    break;
+                }
+            }
+
+            if (agregado)
+            {
+                Console.WriteLine("Ingrediente adicional [" + adicional.getNombre() + "] agregado");
+            }
+            else
+            {
+                Console.WriteLine("No se puede agregar mas ingredientes");
+            }
         }
 
 
