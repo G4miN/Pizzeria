@@ -15,7 +15,7 @@ namespace Pizzeria
             Ingredientes palitosqueso = new Ingredientes("Palitos Rellenos con Queso", 50);
             Ingredientes bebida = new Ingredientes("Coca-Cola", 30);
             agregarAdicionales(palitosqueso);
-            agregarAdicionales(bebida);
+            agregarAdicionales(bebida);          
         }
     }
 }

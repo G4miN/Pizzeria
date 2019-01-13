@@ -19,15 +19,16 @@ namespace Pizzeria
 
         private String encabezado()
         {
-            return "Local: " + nombreLocal + "\n" + "Atendido por: " + nombreVendedor + "\n\n";
+            var fecha = DateTime.Now.ToString("hh:mm");
+            return "Local: " + nombreLocal + "\n" + "Atendido por: " + nombreVendedor + " Hora: "+fecha + "\n\n";
         }
 
         public void imprimirMenu()
         {
             String menu = encabezado();
-            menu += "[1] Hamburguesa normal\n";
-            menu += "[2] Hamburguesa saludable\n";
-            menu += "[3] Hamburguesa premium\n";
+            menu += "[1] Pizza Normal\n";
+            menu += "[2] Pizza Saludable\n";
+            menu += "[3] Pizza Premium\n";
             menu += "[4] Salir\n";
             Console.WriteLine(menu);
             Console.WriteLine("Seleccione entre las opciones disponibles: ");

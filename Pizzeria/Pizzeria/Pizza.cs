@@ -77,8 +77,8 @@ namespace Pizzeria
         {
             String todo = "\n====================================================================\n";
             todo += "Precio Base: " + preciobase + "\n";
-            todo += "Tipo de pan: " + masa.getNombre() + "\n";
-            todo += "Tipo de carne: " + salsa.getNombre() + "\n";
+            todo += "Tipo de Masa: " + masa.getNombre() + "\n";
+            todo += "Tipo de Salsa: " + salsa.getNombre() + "\n";
             todo += getAgregados() + " Adicionales: \n";
 
             //Listar ingredientes adicionales
